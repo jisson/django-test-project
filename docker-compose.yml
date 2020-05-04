@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+    django-test-project:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      environment:
+        DJANGO_SETTINGS_MODULE: django_test_project.settings.dev
+      ports:
+        - "8000:8000"
+      restart: unless-stopped
+      volumes:
+        - .:/app
+        # Allow to enable ipython history.
+        - ipythondata:/var/lib/.ipython/
+      working_dir: /app
+
+volumes:
+  ipythondata:
