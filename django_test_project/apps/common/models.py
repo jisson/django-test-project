@@ -21,16 +21,6 @@ class Timestampable(models.Model):
         help_text=_("When this object was last updated."),
     )
 
-    # FIXME: Check if this is useful.
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #
-    #     # Set help texts here. It would be empty on derived class otherwise.
-    #     created_at = self._meta.get_field('created_at')
-    #     created_at.help_text = _("When this object was created.")
-    #     updated_at = self._meta.get_field('updated_at')
-    #     updated_at.help_text = _("When this object was last updated.")
-
     class Meta:
         abstract = True
 
