@@ -2,6 +2,6 @@ Django==2.2.12
 
 django-environ==0.4.5
 django-filter==2.2.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 
 drf-yasg==1.17.1
